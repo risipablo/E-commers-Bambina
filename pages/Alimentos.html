@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pablo Risi">
+    <meta name="description" content="Alimentos para perro y gato. Marcas Premium. Realizamos envios a domicilios">
+    <meta name="keyboard" content="Alimentos,perros,gatos,royalcanin,biopet,eukanuba,sieger,oldprince,excellent,agility,nutricare,balanced,dermaconfort,urinary,reducecalories,adulto,razapequeña,cachorro">
+    <title>Alimentos</title>
+    <link rel="icon"  href="../Imagen/logo.jpg" type="png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../Scss/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+
+    
+</head> 
+<body>
+    <div class="contenedor-header">
+        <header>
+            <div class="icon">
+                <div class="icon2">
+                    <a href="https://www.instagram.com/bambinapetshop"  class="social-icon"target="_blank" > 
+                        <i class="fa-brands fa-instagram"></i> </a>
+                    <a href="https://www.facebook.com/Bambina.alimentosyaccesorios" class="#" target="_blank"> 
+                        <i class="fa-brands fa-facebook"></i> </a>
+                    </div>
+                    <div class="index">
+                        <a href="../index.html"> <p> Bambina Petshop </p> </a>
+                    </div>
+            </div>
+            <div class="contenedor-logo">
+                    <div class="logo">
+                        <a href="../index.html">
+                        <img src="../Imagen/logo.jpg" alt="logo"></a>
+                    </div>
+                <div class="buscar">
+                    <input type="text"  id="inputBuscar" class="buscar_texto" placeholder="¿Que estas buscando?">
+                        <a href="#" class="boton">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                </div>
+                <section class="ocultar">  
+                    <div class="user2">
+                        <i class="fa-solid fa-user">
+                        </i>
+                    </div>
+                    <h3> 
+                        <span id="cantidadProductos">0</span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </h3>
+                    <div class="scroll">
+                        <div id="carrito">
+                            <p>loren </p>
+                        </div>
+                    </div>
+                    <h4>Total: $<span id="totalCarrito">0</span></h4>
+                    <a href="#" id="botonComprar" class="btn btnComprar oculto">Comprar</a>
+                </section> 
+        </div>
+
+            <div class="overlay"></div>
+            <button class="burger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-close"></i>
+            </button>
+            <aside>
+                <div class="user">
+                    <i class="fa-solid fa-user">
+                        <p>Iniciar Sesion </p>
+                    </i>
+                    
+                </div>
+                
+                <ul>
+                    <li> <a href="../pages/Alimentos.html">Alimentos</a> </li>
+                    <li> <a href="../pages/Indumentaria.html" >Indumentaria</a> </li>
+                    <li> <a href="../pages/Accesorios.html" >Accesorios</a> </li>
+                    <li> <a href="../pages/Articulos.html">Articulos</a> </li>
+                    <li> <a href="../pages/Contacto.html">Contacto</a> </li>
+                    <li> <a href="../pages/Ubicacion.html">¿Donde nos encontramos? </a> </li>
+                    </ul>
+                </ul>
+            </aside>
+
+        
+            
+        </header>
+    </div>   
+
+    
+    <main class="alimentos" >
+        <h2>Alimentos</h2>
+        <div class="categoria" id="categoria">
+            <div class="botones">
+                <button class="despliegue">
+                    <i class="fa-sharp fa-solid fa-filter">
+                        <p>Filtrar</p>
+                    </i>
+                </button>
+            </div>
+
+            <div class="contenido">
+            
+            <ul class="secos">
+                <h3>Secos</h3>
+                <li><a href="#"  class="btnCategoria"> Gato </a></li>
+                <li><a href="#"  class="btnCategoria"> Perro </a></li>
+            </ul>
+        
+            
+            <ul class="marcas">
+                <h3>Marcas</h3>
+                <li><a href="#" class="btnMarca">Royal Canin</a></li>
+                <li><a href="#" class="btnMarca">Agility</a></li>
+                <li><a href="#" class="btnMarca">Biopet</a></li>
+                <li><a href="#" class="btnMarca">Excellent</a></li>
+                <li><a href="#" class="btnMarca">Optimun</a></li>
+                <li><a href="#" class="btnMarca">Biopet</a></li>
+                <li><a href="#" class="btnMarca">Balanced</a></li>
+                <li><a href="#" class="btnMarca">Old Price</a></li>
+                <li><a href="#" class="btnMarca">Gati</a></li>
+                <li><a href="#" class="btnMarca">Sieger</a></li>
+            </ul>
+        
+            
+            <ul class="edades">
+                <h3>Edad</h3>
+                <li>Adulto</li>
+                <li>Cachorro</li>
+                <li>Senior</li>
+            </ul>
+            </div>
+        </div>
+        
+            <div id="productos" class="productos">
+            
+            </div>
+    </main>
+
+    
+
+
+
+    <footer id="pie-pagina" class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <h2> Categorìas </h2>
+                    <div class="Categorias">
+                        <ul>
+                            <li> <a href="../pages/Alimentos.html"> Alimentos </a> </li>
+                            <li> <a href="../pages/Accesorios.html"> Accesorios </a> </li>
+                            <li> <a href="../pages/Indumentaria.html"> Indumentaria </a> </li>
+                            <li> <a href="../pages/Articulos.html"> Articulos </a> </li>
+                            <li> <a href="../pages/Contacto.html"> Contacto </a> </li>
+                            <li> <a href="../pages/Ubicacion.html"> ¿Como llegar? </a> </li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="box">
+                <h2>Contactos</h2>
+                    <div class="contacto">
+                        <ul>      
+                            <li> <i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me//542994707701"> (299) 4707701  </a>  </li> 
+                            <li> <i class="fa-solid fa-location-dot"> <a href=""> Belgrano 321 - Cipolletti </a> </i> </li>
+                            <li> <i class="fa-solid fa-envelope"> <a>bambinapetshop@hotmail.com </a> </i> </li>  
+                            
+                        </ul>
+                    </div>
+        </div>
+
+        <div class="box">
+            <h2> Sìguenos </h2>
+            <div class="red-social">
+                
+                <a href="https://www.instagram.com/bambinapetshop" class="btn-insta" target="_blank" > 
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a  href="https://www.facebook.com/Bambina.alimentosyaccesorios" class="btn-face" target="_blank"> 
+                    <i class="fa-brands fa-facebook"> </i> 
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-wsp">
+        <a href="https://wa.me//542994707701" class="btn-wsp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        </div>
+    
+    
+        <div class="grupo-2"> 
+            <small>&copy; 2023 BAMBINA Petshop <b> Todos los derechos reservados </b> </small>
+        </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="../JS/menu.js"> </script>
+        <script src="../JS/app.js"></script>
+        <script src="../JS/filtro.js"></script>
+</body>

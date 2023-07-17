@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="compra online de indumentaria. Aceptamos devoluciones o cambios de talles">
+    <meta name="keyboard" content="indumentaria,perro,gato,polares,precios,buzos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pablo Risi">
+    <meta name="description" content="Bambina petshop. Te invitamos a nuestra web oficial donde vas a encontrar lo mejor para tus mascotas. Ellos son parte de tu familia">
+    <meta name="keyboard" content="alimentos,mascotas,gato,perro,indumentaria,accesorios,colchonetas,pipetas,estetita,precios accesibles">
+    <meta name="robots" content="index,follow">
+    <title>Bambina Petshop</title>
+    <link rel="icon"  href="Imagen/logo.jpg" type="png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="./Scss/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    
+    
+
+    
+</head>  
+<body>
+    <div class="contenedor-header">
+        <header>
+            <div class="icon">
+                <div class="icon2">
+                    <a href="https://www.instagram.com/bambinapetshop"  class="social-icon"target="_blank" > 
+                        <i class="fa-brands fa-instagram"></i> </a>
+                    <a href="https://www.facebook.com/Bambina.alimentosyaccesorios" class="#" target="_blank"> 
+                        <i class="fa-brands fa-facebook"></i> </a>
+                    </div>
+                <div class="index">
+                    <a href="./index.html"> <p> Bambina Petshop </p> </a>
+                </div>
+            </div>     
+
+            <div class="contenedor-logo">
+                    <div class="logo">
+                        <a href="index.html">
+                        <img src="Imagen/logo.jpg" alt="logo"></a>
+                    </div>
+                    <div class="buscar">
+                        <input type="text" class="buscar_texto" placeholder="¿Que estas buscando?">
+                            <a href="./pages/Error404.html" class="boton">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                    </div>
+                    <section class="ocultar">  
+                        <div class="user2">
+                            <i class="fa-solid fa-user">
+                            </i>
+                        </div>
+                        <h3> 
+                            <span id="cantidadProductos">0</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </h3>
+                        <div class="scroll">
+                            <div id="carrito">
+                                <p>loren </p>
+                            </div>
+                        </div>
+                        <h4>Total: $<span id="totalCarrito">0</span></h4>
+                        <a href="#" id="botonComprar" class="btn btnComprar oculto">Comprar</a>
+                    </section> 
+            </div>
+
+            
+            <div class="overlay"></div>
+            <button class="burger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-close"></i>
+            </button>
+            <aside>
+                
+                <div class="user">
+                    <i class="fa-solid fa-user">
+                        <p>Iniciar Sesion </p>
+                    </i>
+                </div>
+
+                <ul>
+                    <li> <a href="pages/Alimentos.html">Alimentos</a> </li>
+                    <li> <a href="pages/Indumentaria.html" >Indumentaria</a> </li>
+                    <li> <a href="pages/Accesorios.html" >Accesorios</a> </li>
+                    <li> <a href="pages/Articulos.html">Articulos</a> </li>
+                    <li> <a href="pages/Contacto.html">Contacto</a> </li>
+                    <li> <a href="pages/Ubicacion.html">¿Donde nos encontramos? </a> </li>
+                    </ul>
+                </ul>
+            </aside>
+
+
+
+        </header>
+    </div>   
+
+    <div class="contenedor-carousel" data-aos="fade-down">
+        <h1> ¡Te damos la bienvenida a nuestra pagina oficial!</h1>
+        <div class="carousel">
+        </div>
+    </div>
+
+    
+    <Section id="baners" class="baners">
+        <div class="contenido-novedades" >
+            <h2>  Destacados </h2>
+                <div class="cartas" data-aos="fade-down" >
+                    <div class="carta">
+                        <a href="pages/Indumentaria.html" target="_blank">
+                        <h3> Indumentaria </h3>
+                        <button> Ir </button>
+                        </a>
+                    </div>
+
+                    <div class="carta">
+                        <a href="pages/Accesorios.html" target="_blank" >
+                        <h3> Colchonetas </h3>
+                        <button> Ir</button>
+                        </a>
+                    </div>
+                    
+                    <div class="carta">
+                        <a href="pages/Accesorios.html" target="_blank" > 
+                        <h3>Juguetes</h3>
+                        <button> Ir</button>
+                        </a>  
+                    </div>
+            </div>
+        </Section>
+
+    <Section id="sociales" class="sociales" >
+            <div class="container" >
+                <h2> Sigamos Conectados </h2>
+                    <div class="skill">
+                        <div class="fila">
+    
+                            <div class="instagram">
+                                <a href="https://www.instagram.com/bambinapetshop" class="" target="_blank" > 
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        
+                            <div class="whatsapp">
+                                <a href="https://wa.me//542994707701" class="" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+    
+                            <div class="facebook">
+                                <a  href="https://www.facebook.com/Bambina.alimentosyaccesorios" class="" target="_blank"> 
+                                    <i class="fa-brands fa-facebook"> </i> 
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    </Section>
+
+    
+    <section class="slider" >
+    <h2> Destacados </h2>
+        <div class="swiper" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide--one">
+            <div>
+            </div>
+            </div>
+            <div class="swiper-slide swiper-slide--two">
+            <div>
+            </div>
+            </div>
+            <div class="swiper-slide swiper-slide--three">
+            <div>
+            </div>
+            </div>
+            <div class="swiper-slide swiper-slide--four">
+            <div>
+            </div>
+            </div>
+            <div class="swiper-slide swiper-slide--five">
+            <div>
+            </div>
+            </div>
+            <div class="swiper-slide swiper-slide--six">
+            <div>
+            </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <section id="envios" class="envios" >
+        <div class="container" >
+            <h2> Envios a domicilios </h2>
+            <div class="fila" >
+                <div class="cell">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p> Escribinos </p>
+                </div>
+
+                <div class="compra">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p> Arma tu pedido </p>
+                </div>
+
+                <div class="auto">
+                    <i class="fa-sharp fa-solid fa-car-side"></i>
+                    <p> Te lo llevamos </p>
+                </div>
+                <div class="money">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <p>Pagas en el momento. <br> Sin costo de envio </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="pie-pagina" class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <h2> Categorìas </h2>
+                    <div class="Categorias">
+                        <ul>
+                            <li> <a href="pages/Alimentos.html"> Alimentos </a> </li>
+                            <li> <a href="pages/Accesorios.html"> Accesorios </a> </li>
+                            <li> <a href="pages/Indumentaria.html"> Indumentaria </a> </li>
+                            <li> <a href="pages/Articulos.html"> Articulos </a> </li>
+                            <li> <a href="pages/Contacto.html"> Contacto </a> </li>
+                            <li> <a href="pages/Ubicacion.html"> ¿Como llegar? </a> </li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="box">
+                <h2>Contactos</h2>
+                    <div class="contacto">
+                        <ul>      
+                            <li> <i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me//542994707701"> (299) 4707701 </a> </li> 
+                            <li> <i class="fa-solid fa-location-dot"> </i> <a href="pages/Ubicacion.html"> Belgrano 321 - Cipolletti </a> </li>
+                            <li> <i class="fa-solid fa-envelope"> </i> <a href="pages/Contacto.html">bambinapetshop@hotmail.com </a> </li>  
+                            
+                        </ul>
+                    </div>
+        </div>
+
+        <div class="box">
+            <h2> Sìguenos </h2>
+            <div class="red-social">
+                
+                <a href="https://www.instagram.com/bambinapetshop" class="btn-insta" target="_blank" > 
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a  href="https://www.facebook.com/Bambina.alimentosyaccesorios" class="btn-face" target="_blank"> 
+                    <i class="fa-brands fa-facebook"> </i> 
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-wsp">
+        <a href="https://wa.me//542994707701" class="btn-wsp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        </div>
+    
+    
+        <div class="grupo-2"> 
+            <small>&copy; 2023 BAMBINA Petshop <b> Todos los derechos reservados </b> </small>
+        </div>
+        </footer>
+        
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="./JS/slider.js"></script>
+        <script src="./JS/menu.js"> </script>
+        <script src="./JS/app.js"></script>
+</body>

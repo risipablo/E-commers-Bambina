@@ -1,0 +1,130 @@
+
+
+h2{
+    @include titulosh2
+}
+
+/* Seccion ubicacion*/
+
+.ubicacion{
+    @include contenedor;
+
+    .fila{
+        display: flex;
+        flex-direction: column;
+
+        .col{
+            width:50%;
+        padding:0px;
+        position: relative;
+
+            iframe{
+                width: 200%;
+                padding: 8px 8px;
+            }
+        }
+
+        .info{
+            ul{
+                li{
+                    display: block;
+                    font-size: $font-a;
+                    margin: 20px 0px;
+
+                    p{
+                        padding: 10px
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contacto {
+    .contenido-seccion{
+        @include contenedor;
+
+        .texto p{
+            font-family:$font-a; 
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 10px 0px 30px 0px;
+            color: #080808;
+        }
+
+        .fila{
+            display: flex;
+        justify-content: center;
+        align-items: center;
+
+            .col{
+                width:70%;
+                padding: 10px;
+                position:relative;
+
+                input,
+                textarea{
+                    font-family:$font-a;
+                    display:block;
+                    text-align: center;
+                    width: 100%;
+                    border:none;
+                    padding: 20px 10px;
+                    margin-bottom: 25px;
+                    background-color: $colorcontac;
+                    font-size: 12px;
+                    border-radius: 20px;
+                }
+
+                button{
+                    display: block;
+                    margin: auto;
+                    cursor: pointer;
+                    background-color: #e94c4c;
+                    border: none;
+                    padding: 10px 40px;
+                    border-radius: 20px;
+                    transition:.3s;
+                    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+                    line-height: 1.25;
+
+                    p{
+                        color: #fff;
+                        font-size: 12px;
+                        font-family: $font-a;
+                    }
+
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:800px){
+    h2{
+            margin-top: 70px;
+    }
+    .ubicacion{
+        .fila{
+            flex-direction: row;
+
+            .col iframe{
+                width: 120%;
+                padding-left: 60px;
+            }
+            
+        }
+    }
+
+    .contacto{
+        .texto p{
+            font-size: 1rem;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,10 @@
+{
+    "git.ignoreLimitWarning": true,
+    "editor.fontSize": 12,
+    "editor.accessibilityPageSize": 10,
+    "scm.inputFontSize": 13,
+    "debug.console.fontSize": 12,
+    "markdown.preview.fontSize": 12,
+    "terminal.integrated.fontSize": 12,
+    "interactiveSession.editor.fontSize": 12
+}

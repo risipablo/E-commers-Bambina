@@ -1,0 +1,317 @@
+
+/* carousel */
+
+.contenedor-carousel{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    background-image: linear-gradient(to top,rgba( 30,35,38,.8), rgb(177, 177, 177)),
+    url(../Imagen/sliderss.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 0px 0px 30px 0px;
+    
+
+    h1{
+        @include h1;
+        color: #e7e417;
+    }
+}
+
+/* Banners de la pagina */
+
+.baners{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    display: block;
+
+    h2{
+        @include h_2;
+        justify-content: center;
+        padding: 20px;
+        margin: 90px 0px 0px 0px;
+    }
+
+    h3{
+        @include h3;
+        font-family: $general;
+        
+    }
+    .carta{
+        background-position: center ;
+        background-size: cover;
+        padding: 90px;
+        margin: 30px;
+        border-radius: 18px;
+        box-shadow: 1px 1px 4px rgb(0,0,0,3);
+        cursor: pointer;
+    }
+
+    .carta:first-child{
+    
+        background-image: url("../Imagen/art1.jpg");
+        background-repeat: no-repeat;
+        }
+        
+        
+        .carta:nth-child(2){ 
+            background-image: url("../Imagen/moises.jpg");
+            background-repeat: no-repeat;
+        }
+        
+        .carta:nth-child(3){
+            background-image: url("../Imagen/juguetegato.jpg");
+            background-repeat: no-repeat;
+        }
+
+        button{
+            @include button;
+        }
+
+        button:hover{
+            cursor: pointer;
+            transition: .8s;
+            background-color: rgb(241, 31, 24);
+        }
+}
+
+
+
+.sociales .container{
+    background-color: $seccionscolor;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 12%;
+    padding-bottom: 30px;
+
+        h2{
+            @include h2;
+        }
+
+
+        .skill .fila{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            i{
+                @include iconos;
+                padding: 30px;
+            } 
+        
+                i:hover{
+                    transition: .8s;
+                }
+
+                
+.instagram i:hover{
+    color:$colorinst;
+    }
+
+.facebook i:hover{
+    color:$colorface; 
+}
+.whatsapp i:hover{
+    color: $colorwa;
+}
+        
+    }
+}
+
+
+
+/* Slider */
+
+.slider{
+    position: relative;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 50px;
+    min-height: 40vh;
+    margin: 0 auto;
+    
+    h2{
+        padding: 20px;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #717171;
+        font-weight: 500;
+        background: #fff;
+        border-radius: 3.125rem;
+        margin: 0 auto;
+        padding: 6px 26px;
+        font-size: 0.9rem;
+        transition: 0.3s ease-in-out;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+    
+    .swiper-pagination-bullet,
+    .swiper-pagination-bullet-active {
+        background: #fff;
+    }
+    
+    .swiper-pagination {
+    
+        transform: scale(1.3);
+    }
+
+    .swiper-slide {
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        padding: 0 0 80px;
+        filter: grayscale(0.6);
+    }
+    
+    
+    
+    .swiper-slide a:hover {
+        color: #005baa;
+    }
+    
+    .swiper-slide div {
+        transition: 0.25s;
+        opacity: 0;
+    }
+    
+    .swiper-slide-active div {
+        opacity: 1;
+    }
+    
+    .swiper-slide--one {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("../Imagen/Alimentos/excegato.jpg") no-repeat 50% 50% / cover;
+    }
+    
+    .swiper-slide--two {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("../Imagen/Accesorios/pretal\ de\ pitbulljpg.jpg") no-repeat 50% 50% / cover;
+    }
+    
+    .swiper-slide--three {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("../Imagen/Ropa/krustys.jpg") no-repeat 50% 50% / cover;
+    }
+    
+    .swiper-slide--four {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("../Imagen/yuna.jpg") no-repeat 50% 50% / cover;
+    }
+    
+    .swiper-slide--five {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("../Imagen/Accesorios/Pretales.jpg") no-repeat 50% 50% / cover;
+    }
+    
+    .swiper-slide--six {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("../Imagen/Ropa/panda,jpg.jpg") no-repeat 50% 50% / cover;
+    }
+    
+    .swiper-3d .swiper-slide-shadow-left,
+    .swiper-3d .swiper-slide-shadow-right {
+        background-image: none;
+    }
+    
+    
+}
+
+
+
+/* seccion envios */
+
+.envios .container{
+    background-color:$seccionscolor;
+    margin-top: 12%;
+    margin-bottom:10%;
+
+    h2{
+        @include h2;
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .fila{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        i{
+            @include iconos;
+            padding: 10px 10px;
+        } 
+        
+        p{
+            font-weight:lighter;
+            font-size: 1.2rem;
+            color: #fff;
+            padding: 14px;
+            margin-bottom: 22px;
+        }
+        
+    }
+}
+
+@media only screen and (min-width:800px){
+
+    /*Carousel*/
+    .contenedor-carousel{
+        height: 110vh;
+        background-size: cover;
+
+        h1{
+            
+            padding-top: 120px;
+            font-size: 2.6em;
+        }
+    }
+
+
+    .baners{
+
+        .cartas{ display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+        }
+    }
+
+    .sociales .container {
+        .skill .fila{ 
+            i {
+            @include iconos2;
+            padding: 35px 8rem;
+            }
+        }
+    }
+    
+
+
+    .envios .container{
+        margin-bottom: 10%;
+        .fila{
+        flex-wrap: wrap;
+        text-align: center;
+        flex-direction: row;
+
+            i{
+                padding: 10px 90px;
+            margin-bottom: 8px;
+            }
+        }
+    }
+}
+

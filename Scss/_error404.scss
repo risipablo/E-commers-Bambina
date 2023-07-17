@@ -1,0 +1,46 @@
+
+.contenedor-error{
+    background-color: $colorfooter;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    .container{
+        align-items: center;
+
+        i{
+            color: $colorerror;
+            font-size: 3rem;
+            margin: 20px;
+        }
+        h1{
+            font-size: 3rem;
+            margin: 20px;
+            color: $colorerror;
+        }
+
+        img{
+            height:auto;
+            width: auto;
+        }
+
+
+        p{
+            padding: 30px;
+        }
+        
+        .item{
+            i{
+                color: $color-a;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1020px) {
+    .contenedor-error{
+        height: 100%;
+    }
+    
+}

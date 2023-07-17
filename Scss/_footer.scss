@@ -1,0 +1,158 @@
+
+
+/* Footer */
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $colorfooter;
+
+    a{
+        font-family: $font-a;
+        font-weight: bold;
+        color: $color-a;
+        font-size: 12px;
+        padding: 0px 6px;
+
+        &:hover{
+            transition: .6s;
+            color:rgb(241,31,24);
+            cursor: pointer;
+        }
+        
+    }
+    
+}
+
+.pie-pagina .grupo-1{
+    color:$colorfi;
+
+    h2{
+        color: $colorfi;
+        display:flex;
+        padding: 0px 6px;
+        font-size: 1.3rem;
+        font-weight: 700px;
+        margin: 22px 0px 18px 0px;
+    }
+
+        li{
+            margin-bottom: 8px;
+            padding: 0px 6px;
+        }
+
+    .red-social i{
+        width: 40px;
+        height: 40px;
+        margin: 0px 0px 20px 0px;
+        line-height: 10px;
+        font-size: 2.1em;
+        text-align: center;
+        border: 30px;
+    }
+
+    .btn-insta i:hover{
+        transition: .7s;
+        color:$colorinst;
+    }
+
+    .btn-face i:hover{
+        transition: .7s;
+        color: $colorface;
+    }
+    
+}
+
+
+/* Derechos reservados */
+
+.grupo-2{
+    background-color: $colorderechos;
+    color: $colorfooter;
+    text-align: center;
+    font-weight: 8px;
+    padding: 12px 6px;
+
+}
+
+/* whatsapp*/
+
+.btn-wsp{
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    line-height: 50px;
+    bottom: 30px;
+    right: 30px;
+    background-color:  $colorwa;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 0px 1px 6px rgb(0,0,0,3);
+    z-index: 80;
+
+    i{
+        font-size: 1.2em;
+    }
+
+    &:hover{
+        text-decoration: none;
+        transition: .9s;
+        background-color: white;
+        color:$colorwa;
+        }
+        
+}
+
+
+
+
+@media only screen and (min-width:800px){
+    footer {
+        a {
+        font-size: 14px;
+        }
+    }
+
+    .pie-pagina .grupo-1{
+        display: grid;
+        grid-template-columns: repeat(3, 9fr); 
+        padding: 10px;
+        margin: 8px 28px;
+        line-height: 10px;
+
+        h2{
+            padding-bottom: 8px;
+            margin-block-start: 1.33em;
+            margin-block-end: 1.33em;
+            font-size: 22px;
+            font-weight: 700px;
+            line-height: 30px;
+            
+        }
+
+        li{
+
+            margin-bottom: 38px;
+        }
+
+    .red-social i{
+            letter-spacing: 8px;
+            width: 40px;
+            height: 40px;
+            margin: 0px 20px 10px 0px;
+            line-height: 10px;
+            font-size: 30px;
+            border: 30px;
+        }
+    }
+
+    .grupo-2{
+        text-align:left;
+        padding: 12px 6px;
+        text-align: center;
+    }
+
+}
