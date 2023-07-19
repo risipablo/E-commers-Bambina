@@ -1,22 +1,14 @@
-class Datos {
+class Datos2 {
     constructor() {
         this.productos = [];
-        this.agregarProductos(1, 'Agility', 3500,"Perro","Agility","Adulto","Agilityadulto.jpg");
-        this.agregarProductos(2, 'Excellent', 5000, "Gato","Excellent","Adulto","excegato.jpg");
-        this.agregarProductos(3, 'Gati', 4000,"Gato","Gati","Adulto","gati.jpg");
-        this.agregarProductos(4, 'Agility Urinary', 5200, "Gato","Agility","Adulto","agiliuri.jpg");
-        this.agregarProductos(5, 'Biopet', 6300, "Perro","Biopet","Adulto","asdadsa.jpg");
-        this.agregarProductos(6, 'Royal Canin', 8500, "Perro","Royal Canin","Adulto","royalm.jpg");
-        this.agregarProductos(7, 'Sieger', 4500, "Perro","Sieger","Adulto","Sieger.jpg");
-        this.agregarProductos(8, 'Royal Canin ', 12500, "Gato","Royal Canin","Adulto","urinary.jpg");
-        this.agregarProductos(9, 'Royal Canin ', 10500, "Perro","Royal Canin","Cachorro","royalc.jpg");
-        this.agregarProductos(10, 'Excellent ', 8200, "Perro","Excellent","Adulto","miniexcell.jpg");
-        this.agregarProductos(11, 'Balanced Adulto ', 4500, "Perro","Balanced","Adulto","corderobalanced.jpg");
-        this.agregarProductos(12, 'Optimun', 4500, "gato","Optimun","Adulto","optimun.jpg");
+        this.agregarProductos(1, 'Polares', 3500,['S', 'M', 'L', 'XL','XLL' ],"polares.jpg");
+        this.agregarProductos(2, 'Harry Potter', 5000,['S', 'M', 'L', 'XL','XLL' ],"potter.jpg");
+        this.agregarProductos(3, 'Rebel', 4000,['S', 'M', 'L', 'XL','XLL' ],"rebel.jpg");
+        this.agregarProductos(4, 'Panda', 5200,['S', 'M', 'L', 'XL','XLL' ],"panda,jpg.jpg");
     }
 
-    agregarProductos(id, nombre, precio, categoria ,marca,edad, imagen) {
-        const producto = new Producto(id, nombre, precio, categoria, marca,edad, imagen);
+    agregarProductos(id, nombre, precio, talle, imagen) {
+        const producto = new Producto(id, nombre, precio,talle, imagen);
         this.productos.push(producto);
     }
 
@@ -32,27 +24,19 @@ class Datos {
         return this.productos.filter((producto) => producto.nombre.toLowerCase().includes(palabra));
     }
 
-    registrosPorCategoria(categoria) {
-        return this.productos.filter((producto) => producto.categoria == categoria);
+    registroPortalle(talle) {
+        return this.productos.find((producto) => producto.talle === talle);
     }
 
-    registrosPorMarca(marca) {
-        return this.productos.filter((producto) => producto.marca == marca);
-    }
 
-    registrosPorEdad(edad) {
-        return this.productos.filter((producto) => producto.edad == edad);
-    }
 }
 
 class Producto {
-    constructor(id, nombre, precio, categoria, marca, edad, imagen ) {
+    constructor(id, nombre, precio, talle, imagen ) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
-        this.categoria = categoria;
-        this.marca = marca;
-        this.edad = edad;
+        this.talle = talle;
         this.imagen = imagen;
     }
 }
@@ -68,8 +52,8 @@ class Carrito {
         this.listar();
     }
 
-    estaenelCarrito({ id }) {
-        return this.carrito.find((producto) => producto.id === id);
+    estaenelCarrito({ id, talle }) {
+        return this.carrito.find((producto) => producto.id === id && producto.talle === talle);
     }
 
     agregar(producto) {
@@ -94,8 +78,8 @@ class Carrito {
         }).showToast();
     }
 
-    quitar(id) {
-        const indice = this.carrito.findIndex((producto) => producto.id === id);
+    quitar({id, talle}) {
+        const indice = this.carrito.findIndex((producto) => producto.id === id && producto.talle === talle);
         if (this.carrito[indice].cantidad > 1) {
             this.carrito[indice].cantidad--;
         } else {
@@ -123,9 +107,10 @@ class Carrito {
             divCarrito.innerHTML += `
             <div class="productoCarrito">
                 <div class="imagen">
-                    <img src="../Imagen/Alimentos/${producto.imagen}"/>
+                    <img src="../Imagen/Ropa/${producto.imagen}"/>
                 </div>
                 <h4 class="producto">${producto.nombre}</h4>
+                <div class="talles">${producto.talle}</div>
                 <p class="precio"> Precio: $${producto.precio}</p>
                 <div class="items">
                 <p class="cantidad">Cantidad: ${producto.cantidad}</p>
@@ -142,8 +127,8 @@ class Carrito {
         const botonesQuitar = document.querySelectorAll(".btnQuitar");
             for (const boton of botonesQuitar) {
                 boton.onclick = (event) => {
-                event.preventDefault();
-                this.quitar(Number(boton.dataset.id));
+                    event.preventDefault();
+                    this.quitar(producto); 
                 };
             }
             spanCantidadProductos.innerText = this.totalProductos;
@@ -152,9 +137,9 @@ class Carrito {
 }
 
 
-const bd = new Datos();
+const bd = new Datos2();
 
-const divProductos = document.querySelector("#productos");
+const divRopa = document.querySelector("#ropa");
 const divCarrito = document.querySelector("#carrito");
 const spanCantidadProductos = document.querySelector("#cantidadProductos");
 const spanTotalCarrito = document.querySelector("#totalCarrito");
@@ -162,8 +147,6 @@ const inputBuscar = document.querySelector("#inputBuscar");
 const botonCarrito = document.querySelector("section h3");
 const botonComprar = document.querySelector("#botonComprar");
 const botonesCategorias = document.querySelectorAll(".btnCategoria");
-const botonMarca = document.querySelectorAll (".btnMarca");
-const botonEdad = document.querySelectorAll (".btnEdad");
 const closebtn = document.querySelector (".close");
 
 
@@ -180,43 +163,26 @@ botonesCategorias.forEach((boton) => {
     })
 });
 
-/* filtrado por marca */ 
-
-botonMarca.forEach((boton) => {
-    boton.addEventListener("click", (event) => {
-        event.preventDefault();
-        boton.classList.add("seleccionado");
-        const marcaSeleccionada = boton.innerText;
-        const productosPorMarca = bd.registrosPorMarca(marcaSeleccionada);
-        cargarProductos(productosPorMarca);
-    });
-});
-
-/* filtrado por edad */ 
-botonEdad.forEach((boton) => {
-    boton.addEventListener("click", (event) => {
-        event.preventDefault();
-        boton.classList.add("seleccionado");
-        const edadSeleccionada = boton.innerText;
-        const productosPorEdad = bd.registrosPorEdad(edadSeleccionada);
-        cargarProductos(productosPorEdad);
-    });
-});
 
 
 
 cargarProductos(bd.traerRegistros());
 
 function cargarProductos(productos) {
-    divProductos.innerHTML = "";
+    divRopa.innerHTML = "";
 
     for (const producto of productos) {
-        divProductos.innerHTML += `
-            <div class="producto">
+        let tallesHTML ="";
+        for (const talle of producto.talle) {
+            tallesHTML += `<span class ="talles" type = "radio" name = "producto${producto.id}" value ="${talle}" > ${talle}</span>`;
+        }
+        divRopa.innerHTML += `
+            <div class="ropas">
                 <div class="imagen">
-                    <img src="../Imagen/Alimentos/${producto.imagen}"/>
+                    <img src="../Imagen/Ropa/${producto.imagen}"/>
                     </div>
                 <h3>${producto.nombre}</h3>
+                <div id="${producto.id}" class="talles">${tallesHTML}</div>
                 <p class="precio">$${producto.precio}</p>
                 <a href="#" class="btnAgregar" data-id="${producto.id}"> Agregar </a>
             </div>
@@ -229,11 +195,25 @@ function cargarProductos(productos) {
             event.preventDefault();
             const id = Number(boton.dataset.id);
             const producto = bd.registroPorId(id);
-            carrito.agregar(producto);
+            const talleEl = document.getElementById (id);
+            
+            carrito.agregar({
+                ...producto, 
+                talle: talleEl.getAttribute ("value")
+            });
         });
-        }
-
+    }
 }
+
+    const botonesTalle = document.querySelectorAll (".talles");
+    for (const boton of botonesTalle) {
+        boton.addEventListener ("click", (event) => {
+            const value = boton.value;
+            event.target.parentNode.setAttribute("value", value);
+        })
+    }
+
+
     botonComprar.addEventListener("click", (event) => {
         event.preventDefault();
         Swal.fire({

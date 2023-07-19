@@ -128,7 +128,7 @@
 /* Slider */
 
 .slider{
-    position: relative;
+    
     align-items: center;
     gap: 50px;
     padding: 20px 50px;
@@ -169,6 +169,7 @@
     .swiper-slide {
         height: 420px;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: end;
         align-items: center;
@@ -283,8 +284,9 @@
 
     .baners{
 
-        .cartas{ display: flex;
-            flex-flow: wrap;
+        .cartas{ 
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
         }
     }
@@ -293,7 +295,7 @@
         .skill .fila{ 
             i {
             @include iconos2;
-            padding: 35px 8rem;
+            padding: 30px 8rem;
             }
         }
     }

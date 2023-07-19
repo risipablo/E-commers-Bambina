@@ -1,7 +1,11 @@
-    const dropdownBtn = document.querySelector('.despliegue');
-    const dropdownContent = document.querySelector('.contenido');
+const abrir = document.querySelector('.despliegue');
+const cerrar = document.querySelector('.cerrar');
+const contenido = document.querySelector('.contenido');
 
-    dropdownBtn.addEventListener('click', function () {
-    dropdownContent.classList.toggle('show');
-    });
-        
+abrir.addEventListener('click', function () {
+    contenido.classList.add('show'); 
+});
+
+cerrar.addEventListener("click", () => {
+    contenido.classList.remove('show');
+});

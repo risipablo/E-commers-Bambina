@@ -52,15 +52,20 @@
                     </div>
                     <h3> 
                         <span id="cantidadProductos">0</span>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            
                     </h3>
-                    <div class="scroll">
+                    <div id="scroll">
                         <div id="carrito">
-                            <p>loren </p>
                         </div>
                     </div>
                     <h4>Total: $<span id="totalCarrito">0</span></h4>
                     <a href="#" id="botonComprar" class="btn btnComprar oculto">Comprar</a>
+                    <div class="close">
+                    <i class="fa-solid fa-close">
+                        <p> Productos agregados </p>
+                    </i>
+                    </d>
                 </section> 
         </div>
 
@@ -103,10 +108,13 @@
                         <p>Filtrar</p>
                     </i>
                 </button>
+                
             </div>
 
             <div class="contenido">
-            
+                <button class="cerrar" id="cerrar">
+                    <i class="fa-solid fa-close"></i>
+                </button>
             <ul class="secos">
                 <h3>Secos</h3>
                 <li><a href="#"  class="btnCategoria"> Gato </a></li>
@@ -131,9 +139,9 @@
             
             <ul class="edades">
                 <h3>Edad</h3>
-                <li>Adulto</li>
-                <li>Cachorro</li>
-                <li>Senior</li>
+                <li> <a href="#"  class="btnEdad"> Adulto </a> </li>
+                <li> <a href="#"  class="btnEdad"> Cachorro </a> </li>
+                <li> <a href="#"  class="btnEdad"> Senior </a> </li>
             </ul>
             </div>
         </div>
@@ -205,7 +213,8 @@
         <script src="https://code.jquery.com/jquery-latest.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-        <script src="../JS/menu.js"> </script>
         <script src="../JS/app.js"></script>
         <script src="../JS/filtro.js"></script>
+        <script src="../JS/menu.js"></script>
+        <script src="../JS/ropa.js"></script>
 </body>

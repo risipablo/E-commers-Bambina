@@ -23,24 +23,25 @@ li{
 /* Seccion pages */
 
 
-.alimentos,
-.accesorios,
-.indumentaria {
-
+.alimentos
+{
     @include contenedor2;
 
+    /* Filtro */
     .categoria{
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: center;
         
+        
         .despliegue {
-            background-color: #ece9e9;
+            background-color: rgb(248, 247, 247);
             border: none;
             width: 300px;
             padding: 10px 4px;
             border-radius: 10px;
+            
             
             p{
                 font-size: 1rem;
@@ -52,12 +53,20 @@ li{
         }
 
         .contenido {
+            
             display: none;
-            background-color: #ebe8e8;
+            background-color:rgb(248, 247, 247);
+            border-radius: 12px;
+            width: 100%;
+            min-height: 100vh;
+            top: 0;
+            left: -100%;
+            transition: left 0.3s ease-in-out;       
         }
         
         .contenido.show {
             display: block;
+            right: 0%; 
         }
     }
 
@@ -113,6 +122,77 @@ li{
     }
 }
 
+.indumentaria{
+    @include contenedor2;
+
+    .ropa{
+        @include grid;
+
+        .ropas{
+            border-radius: 10px;
+            background-color: #f3f0f0;
+            flex-direction: column;
+            text-align: center;
+            &:hover{
+                box-shadow: 0px 10px 20px rgba(0,0,0,0.60);
+                transform:scale(1);
+                transition: .6s;
+                }
+
+            .imagen{
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 10px 10px 0 ;
+                }
+            }
+            h3 {
+                font-size: 1.3rem;
+                margin: 20px 0px;
+                color: #000000;
+                line-height: 2;
+                text-align: center;
+            }
+
+            .precio {
+                font-size: 1.2rem;
+                font-weight: bold;
+                display: inline-block;
+                padding: 4px 10px;
+                color: #000000;
+                margin-top: 4px;
+            }
+            .btnAgregar,
+            .btnQuitar {
+            color: #ebe8e8;
+            background-color: $colorbutton;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            padding: 8px ;
+            border-radius: 12px;
+            }
+        }
+        .talles {
+            margin-top: 10px;
+        }
+        
+        .talles span {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 5px;
+            background-color: #e0e0e0;
+            color: #333;
+            border-radius: 4px;
+        }
+        
+        .talles span:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    }
+}
 
 
 
@@ -120,9 +200,8 @@ li{
 /* Version escritorio*/ 
 
 @media only screen and (min-width:800px){
-    .alimentos,
-    .accesorios,
-    .indumentaria{
+    .alimentos
+    {
         h2{
             @include titulosh2b
         }
@@ -131,7 +210,7 @@ li{
         .categoria{
             .contenido{
                 display:grid;
-                
+                left:-340px;
             }
         }
         .productos{
