@@ -167,16 +167,17 @@ const botonTodos = document.querySelector("#Todos");
 document.getElementById("orden").addEventListener("click", () => {
     document.querySelector(".orden ").classList.toggle("active");
 });
-document.getElementById("ordenarMayor").addEventListener("click", () => {
-    const productosOrdenados = bd.traerRegistros().slice().sort((a, b) => b.precio - a.precio);
-    cargarProductos(productosOrdenados);
-});
-document.getElementById("ordenarMenor").addEventListener("click", () => {
-    const productosOrdenados = bd.traerRegistros().slice().sort((a, b) => a.precio - b.precio);
+document.getElementById("ordenarMayor").addEventListener("click", async () => {
+    const productos = await bd.traerRegistros();
+    const productosOrdenados = productos.slice().sort((a, b) => b.precio - a.precio);
     cargarProductos(productosOrdenados);
 });
 
-
+document.getElementById("ordenarMenor").addEventListener("click", async () => {
+    const productos = await bd.traerRegistros();
+    const productosOrdenados = productos.slice().sort((a, b) => a.precio - b.precio);
+    cargarProductos(productosOrdenados);
+});
 
 /* FIltro boton*/ 
 const abrir = document.querySelector('.filtro');
@@ -224,6 +225,7 @@ botonesCategorias.forEach((boton) => {
     })
 });
 
+
 /* filtrado por marca */ 
 
 botonMarca.forEach((boton) => {
@@ -238,16 +240,17 @@ botonMarca.forEach((boton) => {
 
 
 /* filtrado por edad */ 
+
 botonEdad.forEach((boton) => {
-    boton.addEventListener("click", (event) => {
+    boton.addEventListener("click", async (event) => { 
         event.preventDefault();
         boton.classList.add("seleccionado");
         const edadSeleccionada = boton.innerText;
-        const productosPorEdad = bd.traerRegistros(edadSeleccionada);
-        cargarProductos(productosPorEdad);
+        const productosPorEdad = await bd.traerRegistros(); 
+        const productosFiltrados = productosPorEdad.filter((producto) => producto.edad == edadSeleccionada);
+        cargarProductos(productosFiltrados);
     });
 });
-
 
 
 bd.traerRegistros().then((productos) => cargarProductos(productos));
@@ -278,9 +281,9 @@ function cargarProductos(productos) {
             const producto = bd.registroPorId(id);
             carrito.agregar(producto);
         });
-        }
-
+    }
 }
+
     botonComprar.addEventListener("click", (event) => {
         event.preventDefault();
         Swal.fire({
