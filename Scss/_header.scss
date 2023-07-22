@@ -142,14 +142,14 @@ section {
 
 
 #carrito {
-    /* ... otros estilos ... */
-    overflow-y: hidden; /* Oculta el desplazamiento vertical en el contenedor principal */
-  }
-  
-  #contenedorCarrito {
-    max-height: 300px; /* Altura máxima del contenedor para mostrar el scroll */
-    overflow-y: auto; /* Habilita el desplazamiento vertical cuando el contenido exceda la altura máxima */
-  }
+  /* ... otros estilos ... */
+  overflow-y: hidden; /* Oculta el desplazamiento vertical en el contenedor principal */
+}
+
+#contenedorCarrito {
+  max-height: 300px; /* Altura máxima del contenedor para mostrar el scroll */
+  overflow-y: auto; /* Habilita el desplazamiento vertical cuando el contenido exceda la altura máxima */
+}
 
 section i{
     font-size: 1.4rem;

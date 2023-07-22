@@ -111,10 +111,9 @@ class Carrito {
         this.total = 0;
         this.totalProductos = 0;
         divCarrito.innerHTML = "";
-        contenedorCarrito.innerHTML = "";
 
         for (const producto of this.carrito) {
-            contenedorCarrito.innerHTML += `
+            divCarrito.innerHTML += `
             <div class="productoCarrito">
                 <div class="imagen">
                     <img src="../Imagen/Ropa/${producto.imagen}"/>

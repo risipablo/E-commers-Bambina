@@ -1,6 +1,7 @@
 class Datos {
     constructor() {
         this.productos = [];
+        
     }
 
     agregarProductos(id, nombre, precio, categoria ,marca,edad, imagen,descripcion) {
@@ -9,7 +10,7 @@ class Datos {
     }
 
     async traerRegistros() {
-        const response = await fetch('../JS/productos.json');
+        const response = await fetch("/productos.json");
         this.productos = await response.json();
         return this.productos;
     }
@@ -40,16 +41,6 @@ class Datos {
 
 
 class Producto {
-    constructor(id, nombre, precio, categoria, marca, edad, imagen, descripcion ) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.categoria = categoria;
-        this.marca = marca;
-        this.edad = edad;
-        this.imagen = imagen;
-        this.descripcion = descripcion;
-    }
 }
 
 
