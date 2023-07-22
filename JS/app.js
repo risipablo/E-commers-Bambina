@@ -9,11 +9,12 @@ class Datos {
     }
 
     async traerRegistros() {
-        const response = await fetch ('/JS/productos.json');
-        rhis.productos = await response.json();
+        const response = await fetch('../JS/productos.json');
+        this.productos = await response.json();
         return this.productos;
     }
     
+
     registroPorId(id) {
         return this.productos.find((producto) => producto.id === id);
     }
@@ -36,7 +37,7 @@ class Datos {
     }
 }
 
-bd.traerRegistros().then((productos) => cargarProductos(productos));
+
 
 class Producto {
     constructor(id, nombre, precio, categoria, marca, edad, imagen, descripcion ) {
@@ -258,10 +259,13 @@ botonEdad.forEach((boton) => {
 
 
 
-
-
+bd.traerRegistros().then((productos) => cargarProductos(productos));
 
 function cargarProductos(productos) {
+    (async () => {
+        const productos = await bd.traerRegistros();
+        cargarProductos(productos);
+        })();
     divProductos.innerHTML = "";
 
     for (const producto of productos) {
