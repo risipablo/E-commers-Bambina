@@ -253,10 +253,6 @@ botonEdad.forEach((boton) => {
 bd.traerRegistros().then((productos) => cargarProductos(productos));
 
 function cargarProductos(productos) {
-    (async () => {
-        const productos = await bd.traerRegistros();
-        cargarProductos(productos);
-        })();
     divProductos.innerHTML = "";
 
     for (const producto of productos) {
