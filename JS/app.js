@@ -252,7 +252,7 @@ botonEdad.forEach((boton) => {
         event.preventDefault();
         boton.classList.add("seleccionado");
         const edadSeleccionada = boton.innerText;
-        const productosPorEdad = bd.registrosPorEdad(edadSeleccionada);
+        const productosPorEdad = bd.traerRegistros(edadSeleccionada);
         cargarProductos(productosPorEdad);
     });
 });
