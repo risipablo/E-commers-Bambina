@@ -73,19 +73,19 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8px;
+  margin: 9px;
 }
 .contenedor-header .logo img {
-  height: 60px;
+  height: 50px;
   width: 90px;
 }
 .contenedor-header .buscar {
   display: flex;
   width: 100%;
   background-color: rgb(241, 243, 243);
-  margin-bottom: 40px;
-  margin-top: 30px;
-  border-radius: 40px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border-radius: 18px 18px;
   padding: 0px 8px;
   border: #474747 solid 1px;
 }
@@ -109,9 +109,6 @@ p {
   transition: all 0.3s ease;
   color: #0b0b0b;
 }
-.contenedor-header #scroll {
-  overflow-y: auto;
-}
 .contenedor-header section {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   position: fixed;
@@ -124,9 +121,12 @@ p {
   transition: all 0.7s;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
+.contenedor-header #scroll {
+  overflow-y: auto;
+}
 .contenedor-header section i {
-  font-size: 1.6rem;
-  padding: 0px 9px;
+  font-size: 1.4rem;
+  padding: 0px 12px;
   color: #0b0b0b;
 }
 .contenedor-header section h3 {
@@ -154,7 +154,7 @@ p {
 .contenedor-header section h4 {
   padding-top: 10px;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: rgb(134, 31, 230);
   display: inline-block;
 }
@@ -169,12 +169,12 @@ p {
   width: 100%;
   margin: 20px;
   padding: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .contenedor-header #botonComprar:hover {
-  background-color: #fff;
-  color: #0b0b0b;
-  transition: 0.4s;
+  background-color: #0b0b0b;
+  color: #fff;
+  transition: 0.9s;
 }
 .contenedor-header .close {
   cursor: pointer;
@@ -194,7 +194,7 @@ p {
   color: #fff;
   display: inline-block;
   padding: 2px 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .contenedor-header .ocultar {
   right: -340px;
@@ -206,6 +206,7 @@ p {
   padding: 10px 0;
   margin-bottom: 10px;
   line-height: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .productoCarrito img {
   margin: 9px;
@@ -214,24 +215,31 @@ p {
 }
 .productoCarrito .producto {
   color: #0e0d0d;
-  padding: 6px;
+  margin: 3px;
   font-size: 1.2rem;
+}
+.productoCarrito .descripcion {
+  color: #0e0d0d;
+  font-size: 1rem;
+  margin: 6px;
 }
 .productoCarrito .precio {
   color: #0e0d0d;
-  padding: 6px;
-  font-size: 1.3rem;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 6px;
 }
 .productoCarrito .items {
   color: #0e0d0d;
-  padding: 6px;
+  margin: 6px;
 }
 .productoCarrito .items .cantidad {
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  margin: 0px 50px 0px 0px;
 }
 .productoCarrito .items .btnQuitar {
-  padding: 0px 7px;
+  padding: 0px 9px;
   font-size: 1rem;
 }
 
@@ -321,7 +329,7 @@ aside {
   flex-direction: column;
   width: 260px;
   height: 100%;
-  padding: 30px 20px 20px;
+  padding: 40px 30px;
   background: #f2f2f3;
   transition: 0.3s;
 }
@@ -337,7 +345,7 @@ body.open aside {
 aside li {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 40px;
 }
 
 aside a {
@@ -348,7 +356,7 @@ aside a {
   cursor: pointer;
   transition: 0.7s;
   font-family: "Montserrat", sans-serif;
-  margin: 40px;
+  margin: 20px 0px -10px;
 }
 aside a:hover {
   color: rgb(228, 43, 43);
@@ -462,6 +470,8 @@ aside a:hover {
   height: 90vh;
   background-image: linear-gradient(to top, rgba(30, 35, 38, 0.8), rgb(177, 177, 177)), url(../Imagen/sliderss.jpg);
   background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -502,6 +512,8 @@ aside a:hover {
 .baners .carta {
   background-position: center;
   background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding: 90px;
   margin: 30px;
   border-radius: 18px;
@@ -816,10 +828,8 @@ footer a:hover {
   }
   .pie-pagina .grupo-1 h2 {
     padding-bottom: 8px;
-    -webkit-margin-before: 1.33em;
-            margin-block-start: 1.33em;
-    -webkit-margin-after: 1.33em;
-            margin-block-end: 1.33em;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
     font-size: 22px;
     font-weight: 700px;
     line-height: 30px;
@@ -874,19 +884,27 @@ li {
   /* Filtro */
 }
 .alimentos .categoria {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 20px;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  cursor: pointer;
 }
-.alimentos .categoria .despliegue {
+.alimentos .categoria .filtro {
+  display: flex;
+  justify-content: center;
   background-color: rgb(248, 247, 247);
   border: none;
-  width: 300px;
-  padding: 10px 4px;
+  padding: 8px 4px;
   border-radius: 10px;
+  width: 100%;
 }
-.alimentos .categoria .despliegue p {
+.alimentos .categoria .filtro i {
+  margin-right: 5px;
+}
+.alimentos .categoria .filtro p {
   font-size: 1rem;
   display: inline-block;
   color: #000000;
@@ -894,17 +912,67 @@ li {
 }
 .alimentos .categoria .contenido {
   display: none;
+  border-radius: 20px 20px;
   background-color: rgb(248, 247, 247);
-  border-radius: 12px;
-  width: 100%;
-  min-height: 100vh;
+  position: absolute;
   top: 0;
-  left: -100%;
-  transition: left 0.3s ease-in-out;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.9s;
+}
+.alimentos .categoria .contenido ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  margin-right: 20px;
+}
+.alimentos .categoria .contenido a {
+  color: #2e2d2d;
+}
+.alimentos .categoria .contenido .cerrar {
+  background-color: rgb(158, 76, 235);
+  color: #fff;
+  width: 100%;
+}
+.alimentos .categoria .contenido .cerrar i p {
+  display: inline-block;
+}
+.alimentos .categoria .contenido .todos {
+  display: block;
+  width: 100%;
+  background-color: rgb(158, 76, 235);
+  color: #fff;
+  text-align: center;
+  padding: 3px;
+  cursor: pointer;
 }
 .alimentos .categoria .contenido.show {
   display: block;
-  right: 0%;
+  left: 0;
+}
+.alimentos .categoria .orden {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(248, 247, 247);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 8px 4px;
+}
+.alimentos .categoria .orden p {
+  font-size: 1rem;
+  display: inline-block;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.alimentos .categoria .contenido2 {
+  display: none;
+}
+.alimentos .categoria .orden.active div {
+  display: block;
+  padding: 5px;
 }
 .alimentos .productos {
   display: grid;
@@ -913,10 +981,11 @@ li {
   margin-top: 3%;
   margin-bottom: 10%;
   padding: 10px;
+  height: auto;
 }
 .alimentos .productos .producto {
   border-radius: 10px;
-  background-color: #f3f0f0;
+  background-color: #eeeded;
   flex-direction: column;
   text-align: center;
 }
@@ -925,24 +994,25 @@ li {
   transform: scale(1);
   transition: 0.6s;
 }
-.alimentos .productos .producto .imagen {
-  overflow: hidden;
-}
 .alimentos .productos .producto .imagen img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 10px 10px 0;
 }
 .alimentos .productos .producto h3 {
   font-size: 1.3rem;
-  margin: 20px 0px;
+  margin: 10px 0px;
   color: #000000;
   line-height: 2;
   text-align: center;
 }
+.alimentos .productos .producto .descripcion {
+  color: #242424;
+  margin: 7px;
+}
 .alimentos .productos .producto .precio {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   display: inline-block;
   padding: 4px 10px;
@@ -956,14 +1026,110 @@ li {
   text-decoration: none;
   display: inline-block;
   margin: 10px 0;
-  padding: 8px;
+  padding: 6px;
   border-radius: 12px;
+}
+.alimentos .productos .producto .btnAgregar:hover,
+.alimentos .productos .producto .btnQuitar:hover {
+  transition: 0.6s;
+  background-color: rgb(127, 9, 238);
 }
 
 .indumentaria {
   padding: 140px 0px 80px 0px;
   margin: auto;
   max-width: 1200px;
+}
+.indumentaria .categoria {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.indumentaria .categoria .filtro {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(248, 247, 247);
+  border: none;
+  padding: 8px 4px;
+  border-radius: 10px;
+  width: 100%;
+}
+.indumentaria .categoria .filtro i {
+  margin-right: 5px;
+}
+.indumentaria .categoria .filtro p {
+  font-size: 1rem;
+  display: inline-block;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.indumentaria .categoria .contenido {
+  display: none;
+  border-radius: 20px 20px;
+  background-color: rgb(248, 247, 247);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.9s;
+}
+.indumentaria .categoria .contenido ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  margin-right: 20px;
+}
+.indumentaria .categoria .contenido a {
+  color: #2e2d2d;
+}
+.indumentaria .categoria .contenido .cerrar {
+  background-color: rgb(158, 76, 235);
+  color: #fff;
+  width: 100%;
+}
+.indumentaria .categoria .contenido .cerrar i p {
+  display: inline-block;
+}
+.indumentaria .categoria .contenido .todos {
+  display: block;
+  width: 100%;
+  background-color: rgb(158, 76, 235);
+  color: #fff;
+  text-align: center;
+  padding: 3px;
+  cursor: pointer;
+}
+.indumentaria .categoria .contenido.show {
+  display: block;
+  left: 0;
+}
+.indumentaria .categoria .orden {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(248, 247, 247);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 8px 4px;
+}
+.indumentaria .categoria .orden p {
+  font-size: 1rem;
+  display: inline-block;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.indumentaria .categoria .contenido2 {
+  display: none;
+}
+.indumentaria .categoria .orden.active div {
+  display: block;
+  padding: 5px;
 }
 .indumentaria .ropa {
   display: grid;
@@ -972,10 +1138,11 @@ li {
   margin-top: 3%;
   margin-bottom: 10%;
   padding: 10px;
+  height: auto;
 }
 .indumentaria .ropa .ropas {
   border-radius: 10px;
-  background-color: #f3f0f0;
+  background-color: #eeeded;
   flex-direction: column;
   text-align: center;
 }
@@ -984,24 +1151,25 @@ li {
   transform: scale(1);
   transition: 0.6s;
 }
-.indumentaria .ropa .ropas .imagen {
-  overflow: hidden;
-}
 .indumentaria .ropa .ropas .imagen img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 10px 10px 0;
 }
 .indumentaria .ropa .ropas h3 {
   font-size: 1.3rem;
-  margin: 20px 0px;
+  margin: 10px 0px;
   color: #000000;
   line-height: 2;
   text-align: center;
 }
+.indumentaria .ropa .ropas .descripcion {
+  color: #242424;
+  margin: 7px;
+}
 .indumentaria .ropa .ropas .precio {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   display: inline-block;
   padding: 4px 10px;
@@ -1015,23 +1183,169 @@ li {
   text-decoration: none;
   display: inline-block;
   margin: 10px 0;
-  padding: 8px;
+  padding: 6px;
   border-radius: 12px;
 }
-.indumentaria .ropa .talles {
-  margin-top: 10px;
+.indumentaria .ropa .ropas .btnAgregar:hover,
+.indumentaria .ropa .ropas .btnQuitar:hover {
+  transition: 0.6s;
+  background-color: rgb(127, 9, 238);
 }
-.indumentaria .ropa .talles span {
-  display: inline-block;
-  padding: 5px 10px;
+
+.accesorios {
+  padding: 140px 0px 80px 0px;
+  margin: auto;
+  max-width: 1200px;
+}
+.accesorios .categoria {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.accesorios .categoria .filtro {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(248, 247, 247);
+  border: none;
+  padding: 8px 4px;
+  border-radius: 10px;
+  width: 100%;
+}
+.accesorios .categoria .filtro i {
   margin-right: 5px;
-  background-color: #e0e0e0;
-  color: #333;
-  border-radius: 4px;
 }
-.indumentaria .ropa .talles span:hover {
-  background-color: #333;
+.accesorios .categoria .filtro p {
+  font-size: 1rem;
+  display: inline-block;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.accesorios .categoria .contenido {
+  display: none;
+  border-radius: 20px 20px;
+  background-color: rgb(248, 247, 247);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.9s;
+}
+.accesorios .categoria .contenido ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  margin-right: 20px;
+}
+.accesorios .categoria .contenido a {
+  color: #2e2d2d;
+}
+.accesorios .categoria .contenido .cerrar {
+  background-color: rgb(158, 76, 235);
   color: #fff;
+  width: 100%;
+}
+.accesorios .categoria .contenido .cerrar i p {
+  display: inline-block;
+}
+.accesorios .categoria .contenido .todos {
+  display: block;
+  width: 100%;
+  background-color: rgb(158, 76, 235);
+  color: #fff;
+  text-align: center;
+  padding: 3px;
+  cursor: pointer;
+}
+.accesorios .categoria .contenido.show {
+  display: block;
+  left: 0;
+}
+.accesorios .categoria .orden {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(248, 247, 247);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 8px 4px;
+}
+.accesorios .categoria .orden p {
+  font-size: 1rem;
+  display: inline-block;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.accesorios .categoria .contenido2 {
+  display: none;
+}
+.accesorios .categoria .orden.active div {
+  display: block;
+  padding: 5px;
+}
+.accesorios .acce {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 3%;
+  margin-bottom: 10%;
+  padding: 10px;
+}
+.accesorios .acce .acces {
+  border-radius: 10px;
+  background-color: #eeeded;
+  flex-direction: column;
+  text-align: center;
+}
+.accesorios .acce .acces:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+  transform: scale(1);
+  transition: 0.6s;
+}
+.accesorios .acce .acces .imagen img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px 10px 0;
+}
+.accesorios .acce .acces h3 {
+  font-size: 1.3rem;
+  margin: 10px 0px;
+  color: #000000;
+  line-height: 2;
+  text-align: center;
+}
+.accesorios .acce .acces .descripcion {
+  color: #242424;
+  margin: 7px;
+}
+.accesorios .acce .acces .precio {
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 10px;
+  color: #000000;
+  margin-top: 4px;
+}
+.accesorios .acce .acces .btnAgregar,
+.accesorios .acce .acces .btnQuitar {
+  color: #ebe8e8;
+  background-color: #e94c4c;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 6px;
+  border-radius: 12px;
+}
+.accesorios .acce .acces .btnAgregar:hover,
+.accesorios .acce .acces .btnQuitar:hover {
+  transition: 0.6s;
+  background-color: rgb(127, 9, 238);
 }
 
 /* Version escritorio*/
@@ -1045,18 +1359,17 @@ li {
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  .alimentos .categoria .contenido {
-    display: grid;
-    left: -340px;
+  .alimentos .categoria {
+    margin: 20px;
+    justify-content: left;
   }
   .alimentos .productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 30px;
     cursor: pointer;
     margin-top: 3%;
     margin-bottom: 10%;
-    margin: 0px 9px;
     padding: 0px;
   }
   .alimentos .productos .imagen {
@@ -1082,6 +1395,51 @@ li {
   .alimentos .productos .precio {
     font-size: 90px;
   }
+  .indumentaria {
+    padding: 170px 0px 80px 0px;
+    margin: auto;
+    max-width: 1200px;
+  }
+  .indumentaria h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .indumentaria .categoria .contenido {
+    display: grid;
+    left: -340px;
+  }
+  .indumentaria .ropa {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    cursor: pointer;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    padding: 0px;
+  }
+  .indumentaria .ropa .imagen {
+    overflow: hidden;
+  }
+  .indumentaria .ropa .imagen img {
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .indumentaria .ropa h3 {
+    display: block;
+    color: rgb(158, 76, 235);
+    margin: 20px 6px;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .indumentaria .ropa li:hover {
+    transition: 0.3s;
+    color: rgb(234, 0, 0);
+    cursor: pointer;
+  }
+  .indumentaria .ropa .precio {
+    font-size: 90px;
+  }
 }
 @media only screen and (max-width: 330px) {
   .alimentos h2,
@@ -1096,8 +1454,11 @@ li {
     width: 200px;
   }
   .alimentos .productos,
+  .alimentos .ropa,
   .accesorios .productos,
-  .indumentaria .productos {
+  .accesorios .ropa,
+  .indumentaria .productos,
+  .indumentaria .ropa {
     grid-template-columns: repeat(1, 1fr);
   }
 }

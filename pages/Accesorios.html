@@ -44,6 +44,30 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </a>
                 </div>
+                <section class="ocultar">  
+                    <div class="user2">
+                        <i class="fa-solid fa-user">
+                        </i>
+                    </div>
+                    <h3> 
+                        <span id="cantidadProductos">0</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            
+                    </h3>
+                    
+                        <div id="carrito">
+                            <div id="scroll">
+
+                            </div>
+                        </div>
+                    <h4>Total: $<span id="totalCarrito">0</span></h4>
+                    <a href="#" id="botonComprar" class="btn btnComprar oculto">Comprar</a>
+                    <div class="close">
+                    <i class="fa-solid fa-close">
+                        <p> Productos agregados </p>
+                    </i>
+                    </d>
+                </section> 
         </div>
 
             <div class="overlay"></div>
@@ -52,6 +76,13 @@
                 <i class="fa-solid fa-close"></i>
             </button>
             <aside>
+                <div class="user">
+                    <i class="fa-solid fa-user">
+                        <p>Iniciar Sesion </p>
+                    </i>
+                    
+                </div>
+                
                 <ul>
                     <li> <a href="../pages/Alimentos.html">Alimentos</a> </li>
                     <li> <a href="../pages/Indumentaria.html" >Indumentaria</a> </li>
@@ -62,33 +93,66 @@
                     </ul>
                 </ul>
             </aside>
-
-            <section class="ocultar">  
-                <h3> 
-                    <span id="cantidadProductos">0</span>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </h3>
-        
-                <div id="carrito">
-                </div>
-                <h4>Total: $<span id="totalCarrito">0</span></h4>
-            </section> 
         </header>
     </div>   
 
-    
-
-
-
     <main class="accesorios" >
         <h2>Accesorios</h2>
-            <div id="productos" class="productos">
+        <section class="categoria" id="categoria">
 
-            </div>
+                <div class="filtro">
+                    <i class="fa-sharp fa-solid fa-filter">
+                        <p>Filtrar</p>
+                    </i>
+                </div>
+
+                <div class="orden" id="orden">
+                    <i class="fa-solid fa-sort">
+                        <p> Orden </p>
+                    </i>
+                    <div class="contenido2">
+                        <div id="ordenarMayor">Mayor a Menor</div>
+                        <div id="ordenarMenor">Menor a Mayor </div>
+                    </div>
+                </div>
+
+            <div class="contenido">
+                <div class="cerrar" id="cerrar">
+                    <i class="fa-solid fa-close"> <p> Fitros</p></i>
+                </div>
+
                 
+
+            <ul class="secos">
+                <h3>Secos</h3>
+                <li>
+                <label>
+                    
+                    <input type="checkbox"> <a href="#" class="btnCategoria">
+                        Gato
+                    </a>
+                </label>
+                </li>
+                <li>
+                <label>
+                    <input type="checkbox"> <a href="#" class="btnCategoria">
+                        Perro
+                    </a>
+                </label>
+                </li>
+            </ul>
+            
+            <div><a href="#" class="todos" id="Todos">Mostrar todos</a></div>
+            </div>
+            
+        </section>
+        
+            <div id="acce" class="acce">
+            
+            </div>
     </main>
 
- 
+
 
 
     <footer id="pie-pagina" class="pie-pagina">
@@ -146,11 +210,10 @@
         </div>
         </footer>
         <script src="https://code.jquery.com/jquery-latest.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-        AOS.init();
-    </script>
-    <script src="../JS/menu.js"> </script>
-    <script src="../JS/app.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="../JS/app.js"></script>
+        <script src="../JS/menu.js"></script>
+        <script src="../JS/ropa.js"></script>
+        <script src="../JS/acce.js"></script>
 </body>

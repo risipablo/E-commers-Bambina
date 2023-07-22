@@ -9,6 +9,7 @@
     <meta name="description" content="Alimentos para perro y gato. Marcas Premium. Realizamos envios a domicilios">
     <meta name="keyboard" content="Alimentos,perros,gatos,royalcanin,biopet,eukanuba,sieger,oldprince,excellent,agility,nutricare,balanced,dermaconfort,urinary,reducecalories,adulto,razapequeña,cachorro">
     <title>Alimentos</title>
+
     <link rel="icon"  href="../Imagen/logo.jpg" type="png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
@@ -16,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
     <link rel="stylesheet" type="text/css" href="../Scss/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+
     
 
     
@@ -55,10 +58,12 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                             
                     </h3>
-                    <div id="scroll">
+                    
                         <div id="carrito">
+                            <div id="scroll">
+
+                            </div>
                         </div>
-                    </div>
                     <h4>Total: $<span id="totalCarrito">0</span></h4>
                     <a href="#" id="botonComprar" class="btn btnComprar oculto">Comprar</a>
                     <div class="close">
@@ -101,50 +106,134 @@
     
     <main class="alimentos" >
         <h2>Alimentos</h2>
-        <div class="categoria" id="categoria">
-            <div class="botones">
-                <button class="despliegue">
+        <section class="categoria" id="categoria">
+
+                <div class="filtro">
                     <i class="fa-sharp fa-solid fa-filter">
                         <p>Filtrar</p>
                     </i>
-                </button>
-                
-            </div>
+                </div>
+
+                <div class="orden" id="orden">
+                    <i class="fa-solid fa-sort">
+                        <p> Orden </p>
+                    </i>
+                    <div class="contenido2">
+                        <div id="ordenarMayor">Mayor a Menor</div>
+                        <div id="ordenarMenor">Menor a Mayor </div>
+                    </div>
+                </div>
 
             <div class="contenido">
-                <button class="cerrar" id="cerrar">
-                    <i class="fa-solid fa-close"></i>
-                </button>
+                <div class="cerrar" id="cerrar">
+                    <i class="fa-solid fa-close"> <p> Fitros</p></i>
+                </div>
+
+                
+
             <ul class="secos">
                 <h3>Secos</h3>
-                <li><a href="#"  class="btnCategoria"> Gato </a></li>
-                <li><a href="#"  class="btnCategoria"> Perro </a></li>
+                <li>
+                <label>
+                    
+                <a href="#" class="btnCategoria">
+                        Gato
+                    </a>
+                </label>
+                </li>
+                <li>
+                <label>
+                    <a href="#" class="btnCategoria">
+                        Perro
+                    </a>
+                </label>
+                </li>
             </ul>
-        
             
             <ul class="marcas">
                 <h3>Marcas</h3>
-                <li><a href="#" class="btnMarca">Royal Canin</a></li>
-                <li><a href="#" class="btnMarca">Agility</a></li>
-                <li><a href="#" class="btnMarca">Biopet</a></li>
-                <li><a href="#" class="btnMarca">Excellent</a></li>
-                <li><a href="#" class="btnMarca">Optimun</a></li>
-                <li><a href="#" class="btnMarca">Biopet</a></li>
-                <li><a href="#" class="btnMarca">Balanced</a></li>
-                <li><a href="#" class="btnMarca">Old Price</a></li>
-                <li><a href="#" class="btnMarca">Gati</a></li>
-                <li><a href="#" class="btnMarca">Sieger</a></li>
+                <li>
+                <label>
+                    <input type="checkbox"> <a href="#"  class="btnMarca">
+                        Royal Canin
+                    </a>
+                </label>
+                </li>
+                <li>
+                <label>
+                    <input type="checkbox"> <a href="#"  class="btnMarca">
+                        Agility
+                    </a>
+                </label>
+                </li>
+                <label>
+                    <input type="checkbox"> <a href="#"  class="btnMarca">
+                        Biopet
+                    </a>
+                </label>
+                </li>
+                <label>
+                    <input type="checkbox"> <a href="#"  class="btnMarca">
+                        Excellent
+                    </a>
+                </label>
+                </li>
+                <label>
+                    <input type="checkbox"> <a href="#"  class="btnMarca">
+                        Optimun
+                    </a>
+                </label>
+                </li>
+                <label>
+                    <input type="checkbox"> <a href="#"  class="btnMarca">
+                        Balanced
+                    </a>
+                </label>
+                </li>
+                <label>
+                    <input type="checkbox"> <a href="#"  class="btnMarca">
+                        Old Prince
+                    </a>
+                </label>
+                </li>
+                <label>
+                    <input type="checkbox" > <a href="# " class="btnMarca">
+                        Gati
+                    </a>
+                </label>
+                </li>
             </ul>
-        
+            </ul>
             
             <ul class="edades">
                 <h3>Edad</h3>
-                <li> <a href="#"  class="btnEdad"> Adulto </a> </li>
-                <li> <a href="#"  class="btnEdad"> Cachorro </a> </li>
-                <li> <a href="#"  class="btnEdad"> Senior </a> </li>
+                <li>
+                <label>
+                    <input type="checkbox" > <a href="#" class="btnEdad">
+                        Adulto
+                    </a>
+                    
+                </label>
+                </li>
+                <li>
+                <label>
+                    <input type="checkbox" > <a href="#" class="btnEdad">
+                        Cachorro
+                    </a>
+                </label>
+                </li>
+                <li>
+                <label>
+                    <input type="checkbox" > <a href="#" class="btnEdad">
+                        Senior
+                    </a>
+                </label>
+                </li>
             </ul>
+            <div><a href="#" class="todos" id="Todos">Mostrar todos</a></div>
             </div>
-        </div>
+            
+        </section>
         
             <div id="productos" class="productos">
             
@@ -214,7 +303,6 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="../JS/app.js"></script>
-        <script src="../JS/filtro.js"></script>
         <script src="../JS/menu.js"></script>
         <script src="../JS/ropa.js"></script>
 </body>

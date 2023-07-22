@@ -1,0 +1,144 @@
+
+    [
+        {
+        "id": 1,
+        "nombre": "Agility",
+        "precio": 3500,
+        "categoria": "Perro",
+        "marca": "Agility",
+        "edad": "Adulto",
+        "imagen": "Agilityadulto.jpg",
+        "descripcion": "Adulto raza grande"
+        },
+        {
+        "id": 2,
+        "nombre": "Excellent",
+        "precio": 5000,
+        "categoria": "Gato",
+        "marca": "Excellent",
+        "edad": "Adulto",
+        "imagen": "excegato.jpg",
+        "descripcion": "Gato adulto"
+        },
+        {
+        "id": 3,
+        "nombre": "Gati",
+        "precio": 4000,
+        "categoria": "Gato",
+        "marca": "Gati",
+        "edad": "Adulto",
+        "imagen": "gati.jpg",
+        "descripcion": "Gato adulto"
+        },
+        {
+        "id": 4,
+        "nombre": "Agility Urinary",
+        "precio": 5200,
+        "categoria": "Gato",
+        "marca": "Agility",
+        "edad": "Adulto",
+        "imagen": "agiliuri.jpg",
+        "descripcion": "Gato adulto"
+        },
+        {
+        "id": 5,
+        "nombre": "Biopet",
+        "precio": 6300,
+        "categoria": "Perro",
+        "marca": "Biopet",
+        "edad": "Adulto",
+        "imagen": "asdadsa.jpg",
+        "descripcion": "Adulto raza grande"
+        },
+        {
+        "id": 6,
+        "nombre": "Royal Canin",
+        "precio": 8500,
+        "categoria": "Perro",
+        "marca": "Royal Canin",
+        "edad": "Adulto",
+        "imagen": "royalm.jpg",
+        "descripcion": "Adulto raza pequeñas"
+        },
+        {
+        "id": 7,
+        "nombre": "Sieger",
+        "precio": 4500,
+        "categoria": "Perro",
+        "marca": "Sieger",
+        "edad": "Adulto",
+        "imagen": "Sieger.jpg",
+        "descripcion": "Adulto raza grande"
+        },
+        {
+        "id": 8,
+        "nombre": "Royal Canin ",
+        "precio": 12500,
+        "categoria": "Gato",
+        "marca": "Royal Canin",
+        "edad": "Adulto",
+        "imagen": "urinary.jpg",
+        "descripcion": "Gato adulto"
+        },
+        {
+        "id": 9,
+        "nombre": "Royal Canin ",
+        "precio": 10500,
+        "categoria": "Perro",
+        "marca": "Royal Canin",
+        "edad": "Cachorro",
+        "imagen": "royalc.jpg",
+        "descripcion": "Cachorro raza pequeñas"
+        },
+        {
+        "id": 10,
+        "nombre": "Excellent ",
+        "precio": 8200,
+        "categoria": "Perro",
+        "marca": "Excellent",
+        "edad": "Adulto",
+        "imagen": "miniexcell.jpg",
+        "descripcion": "Adulto raza pequeñas"
+        },
+        {
+        "id": 11,
+        "nombre": "Balanced",
+        "precio": 4500,
+        "categoria": "Perro",
+        "marca": "Balanced",
+        "edad": "Adulto",
+        "imagen": "corderobalanced.jpg",
+        "descripcion": "Adulto raza grande"
+        },
+        {
+        "id": 12,
+        "nombre": "Optimun",
+        "precio": 4500,
+        "categoria": "gato",
+        "marca": "Optimun",
+        "edad": "Adulto",
+        "imagen": "optimun.jpg",
+        "descripcion": "Adulto gato"
+        },
+        {
+        "id": 13,
+        "nombre": "Pro Plan",
+        "precio": 12000,
+        "categoria": "perro",
+        "marca": "Sieger",
+        "edad": "Adulto",
+        "imagen": "proplan.jpg",
+        "descripcion": "Adulto raza pequeña"
+        },
+        {
+        "id": 14,
+        "nombre": "Dog chow",
+        "precio": 7500,
+        "categoria": "perro",
+        "marca": "Dog Chow",
+        "edad": "Adulto",
+        "imagen": "seniordc.jpg",
+        "descripcion": "Adulto senior"
+        }
+    ]
+    
