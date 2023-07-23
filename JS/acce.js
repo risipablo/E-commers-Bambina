@@ -154,15 +154,17 @@ const botonTodos = document.querySelector("#Todos");
 document.getElementById("orden").addEventListener("click", () => {
     document.querySelector(".orden ").classList.toggle("active");
 });
-document.getElementById("ordenarMayor").addEventListener("click", () => {
-    const productosOrdenados = bd.traerRegistros().slice().sort((a, b) => b.precio - a.precio);
-    cargarProductos(productosOrdenados);
-});
-document.getElementById("ordenarMenor").addEventListener("click", () => {
-    const productosOrdenados = bd.traerRegistros().slice().sort((a, b) => a.precio - b.precio);
+document.getElementById("ordenarMayor").addEventListener("click", async () => {
+    const productos = await bd.traerRegistros();
+    const productosOrdenados = productos.slice().sort((a, b) => b.precio - a.precio);
     cargarProductos(productosOrdenados);
 });
 
+document.getElementById("ordenarMenor").addEventListener("click", async () => {
+    const productos = await bd.traerRegistros();
+    const productosOrdenados = productos.slice().sort((a, b) => a.precio - b.precio);
+    cargarProductos(productosOrdenados);
+});
 
 /* FIltro boton*/ 
 const abrir = document.querySelector('.filtro');
