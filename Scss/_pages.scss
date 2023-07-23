@@ -227,13 +227,7 @@ li{
         @include categorias;
     }
 
-    .acce{
-        @include grid;
 
-        .acces{
-            @include innerHtml
-        }
-    }
 
 }
 

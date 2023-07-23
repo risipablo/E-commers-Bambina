@@ -7,7 +7,7 @@
         "categoria": "Perro",
         "marca": "Agility",
         "edad": "Adulto",
-        "imagen": "Agilityadulto.jpg",
+        "imagen": "/Imagen/Alimentos/Agilityadulto.jpg",
         "descripcion": "Adulto raza grande"
         },
         {
@@ -17,7 +17,7 @@
         "categoria": "Gato",
         "marca": "Excellent",
         "edad": "Adulto",
-        "imagen": "./Imagen/Alimentos/excegato.jpg",
+        "imagen": "excegato.jpg",
         "descripcion": "Gato adulto"
         },
         {

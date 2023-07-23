@@ -141,15 +141,6 @@ section {
 }
 
 
-#carrito {
-  /* ... otros estilos ... */
-  overflow-y: hidden; /* Oculta el desplazamiento vertical en el contenedor principal */
-}
-
-#contenedorCarrito {
-  max-height: 300px; /* Altura máxima del contenedor para mostrar el scroll */
-  overflow-y: auto; /* Habilita el desplazamiento vertical cuando el contenido exceda la altura máxima */
-}
 
 section i{
     font-size: 1.4rem;
@@ -511,6 +502,7 @@ aside a {
             flex-direction: row;
             align-items: center;
             background: none;
+            margin: -12px;
         }
         
         aside ul {
@@ -522,7 +514,7 @@ aside a {
         aside li {
             display: flex;
             height: auto;
-            margin: 8px 40px;
+            margin: -8px 40px;
         }
         
         aside a {

@@ -112,7 +112,7 @@ class Carrito {
             divCarrito.innerHTML += `
             <div class="productoCarrito">
                 <div class="imagen">
-                    <img src="../Imagen/Accesorios/${producto.imagen}"/>
+                    <img src="/Imagen/Accesorios/${producto.imagen}"/>
                 </div>
                 <h4 class="producto">${producto.nombre}</h4>
                 <div class="talles">${producto.talle}</div>
@@ -240,15 +240,17 @@ function cargarProductos(productos) {
     divAcce.innerHTML = "";
 
     for (const producto of productos) {
-        let tallesHTML ="";
-        for (const talle of producto.talle) {
-            tallesHTML += `<input class ="input-talles" type = "checkbox" name = "producto${producto.id}" value ="${talle}" > ${talle} </input>`;
+        let tallesHTML = "";
+        if (producto.talle) {
+            for (const talle of producto.talle) {
+                tallesHTML += `<input class="input-talles" type="checkbox" name="producto${producto.id}" value="${talle}">${talle}</input>`;
+            }
         }
         divAcce.innerHTML += `
             <div class="acces">
                 <div class="imagen">
-                    <img src="../Imagen/Accesorios/${producto.imagen}"/>
-                    </div>
+                    <img src="../Imagenes/Accesorios/${producto.imagen}"/>
+                </div>
                 <h3>${producto.nombre}</h3>
                 <div id="${producto.id}" class="talles">${tallesHTML}</div>
                 <p class="precio">$${producto.precio}</p>
@@ -256,7 +258,6 @@ function cargarProductos(productos) {
             </div>
         `;
     }
-
         const botonesAgregar = document.querySelectorAll(".btnAgregar");
         for (const boton of botonesAgregar) {
         boton.addEventListener("click", (event) => {

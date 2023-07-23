@@ -1,20 +1,18 @@
 class Datos {
     constructor() {
         this.productos = [];
-        
+    }  
+    
+    async traerRegistros() {
+        const response = await fetch ("../JS/alimentos.json");
+        this.productos = await response.json();
+        return this.productos;
     }
 
     agregarProductos(id, nombre, precio, categoria ,marca,edad, imagen,descripcion) {
         const producto = new Producto(id, nombre, precio, categoria, marca,edad, imagen,descripcion);
         this.productos.push(producto);
     }
-
-    async traerRegistros() {
-        const response = await fetch("/productos.json");
-        this.productos = await response.json();
-        return this.productos;
-    }
-    
 
     registroPorId(id) {
         return this.productos.find((producto) => producto.id === id);
@@ -41,6 +39,15 @@ class Datos {
 
 
 class Producto {
+    constructor(id, nombre, precio, categoria, marca, imagen, descripcion = false) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.categoria = categoria;
+        this.marca = marca;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
+    }
 }
 
 
@@ -109,7 +116,7 @@ class Carrito {
             divCarrito.innerHTML += `
             <div class="productoCarrito">
                 <div class="imagen">
-                    <img src="../Imagen/Alimentos/${producto.imagen}"/>
+                    <img src="/Imagen/Alimentos/${producto.imagen}"/>
                 </div>
                 <h4 class="producto">${producto.nombre}</h4>
                 <p class="descripcion"> ${producto.descripcion}</p>
@@ -263,7 +270,7 @@ function cargarProductos(productos) {
 
             <div class="producto">
                 <div class="imagen">
-                    <img src="../Imagen/Alimentos/${producto.imagen}"/>
+                    <img src="/Imagen/Alimentos/${producto.imagen}"/>
                     </div>
                 <h3>${producto.nombre}</h3>
                 <p class="descripcion"> ${producto.descripcion}</p>

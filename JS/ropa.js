@@ -116,7 +116,7 @@ class Carrito {
             divCarrito.innerHTML += `
             <div class="productoCarrito">
                 <div class="imagen">
-                    <img src="../Imagen/Ropa/${producto.imagen}"/>
+                    <img src="/Imagen/Ropa/${producto.imagen}"/>
                 </div>
                 <h4 class="producto">${producto.nombre}</h4>
                 <div class="talles">${producto.talle}</div>
