@@ -39,7 +39,7 @@ li{
             cursor: pointer;
         
             
-
+        
             .filtro { 
                 display: flex;             
                 justify-content: center;
@@ -60,7 +60,7 @@ li{
                 }
                 
             }
-    
+        
             .contenido {
                 display: none;
                 border-radius: 20px 20px;
@@ -71,12 +71,13 @@ li{
                 width: 100%;
                 z-index: 999;   
                 transition: all 0.9s;
-
+        
                 ul {
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
-
+                    width: 200px;
+                    margin-right: 20px;
                 }
         
                 a{
@@ -110,7 +111,7 @@ li{
                 left:0;
                 
             }
-
+        
             .orden {
                 display: flex;               
                 justify-content: center;
@@ -220,16 +221,21 @@ li{
 }
 
 .accesorios{
-
     @include contenedor2;
 
     .categoria{
         @include categorias;
     }
 
+    .acce{
+        @include grid;
 
-
+        .acces{
+            @include innerHtml;
+        }
+    }
 }
+
 
 
 /* Version escritorio*/ 
@@ -240,6 +246,7 @@ li{
         h2{
             @include titulosh2b
         }
+
         @include contenedor;
 
         .categoria{
@@ -283,10 +290,8 @@ li{
             @include contenedor;
     
             .categoria{
-                .contenido{
-                    display:grid;
-                    left:-340px;
-                }
+                justify-content: left;
+                margin: 20px;
             }
             .ropa{
                 @include grid2;

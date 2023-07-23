@@ -509,12 +509,13 @@ aside a {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            margin: -6px;
         }
         
         aside li {
             display: flex;
             height: auto;
-            margin: -8px 40px;
+            margin: 0px 40px;
         }
         
         aside a {

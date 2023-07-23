@@ -39,14 +39,14 @@ class Datos {
 
 
 class Producto {
-    constructor(id, nombre, precio, categoria, marca, imagen, descripcion = false) {
+    constructor(id, nombre, precio, categoria, marca, descripcion, imagen = false ) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.categoria = categoria;
         this.marca = marca;
-        this.imagen = imagen;
         this.descripcion = descripcion;
+        this.imagen = imagen;
     }
 }
 
@@ -116,7 +116,7 @@ class Carrito {
             divCarrito.innerHTML += `
             <div class="productoCarrito">
                 <div class="imagen">
-                    <img src="/Imagen/Alimentos/${producto.imagen}"/>
+                    <img src="../Imagen/Alimentos/${producto.imagen}"/>
                 </div>
                 <h4 class="producto">${producto.nombre}</h4>
                 <p class="descripcion"> ${producto.descripcion}</p>
@@ -270,7 +270,7 @@ function cargarProductos(productos) {
 
             <div class="producto">
                 <div class="imagen">
-                    <img src="/Imagen/Alimentos/${producto.imagen}"/>
+                    <img src="../Imagen/Alimentos/${producto.imagen}"/>
                     </div>
                 <h3>${producto.nombre}</h3>
                 <p class="descripcion"> ${producto.descripcion}</p>

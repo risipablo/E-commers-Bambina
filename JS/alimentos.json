@@ -7,7 +7,7 @@
         "categoria": "Perro",
         "marca": "Agility",
         "edad": "Adulto",
-        "imagen": "/Imagen/Alimentos/Agilityadulto.jpg",
+        "imagen": "../Imagen/Alimentos/Agilityadulto.jpg",
         "descripcion": "Adulto raza grande"
         },
         {
