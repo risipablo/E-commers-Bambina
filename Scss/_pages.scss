@@ -62,6 +62,7 @@ li{
             }
         
             .contenido {
+                transition: all 0.9s;
                 display: none;
                 border-radius: 20px 20px;
                 background-color:rgb(248, 247, 247);
@@ -70,7 +71,6 @@ li{
                 left: 0;
                 width: 100%;
                 z-index: 999;   
-                transition: all 0.9s;
         
                 ul {
                     list-style-type: none;
@@ -88,9 +88,11 @@ li{
                     color: #fff;
                     width: 100%;
                     i{
+                        padding: 2px 9px;
                         
                         p{
                             display: inline-block; 
+                            padding: 2px 10px;
                         }             
                     }
                 }

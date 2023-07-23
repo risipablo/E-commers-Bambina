@@ -231,7 +231,7 @@ function cargarProductos(productos) {
         divAcce.innerHTML += `
             <div class="acces">
                 <div class="imagen">
-                    <img src="/Imagen/Accesorios/${producto.imagen}"/>
+                    <img src="../Imagen/Accesorios/${producto.imagen}"/>
                 </div>
                 <h3>${producto.nombre}</h3>
                 <div id="${producto.id}" class="talles">${tallesHTML}</div>

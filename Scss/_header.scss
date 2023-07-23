@@ -124,11 +124,6 @@ p{
 
 /* carrito */
 
-
-
-#scroll {
-    overflow-y: auto;
-}
 section {
     font-family: $general;
     position: fixed;
@@ -188,6 +183,12 @@ section h4 {
     color: $color-a;
     display: inline-block;
 }
+#scroll {
+    width: 300px;
+    height: 300px;
+    overflow-y: auto;
+}
+
 
 #botonComprar{
     background-color: rgb(245, 27, 27);
