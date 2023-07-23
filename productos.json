@@ -17,7 +17,7 @@
         "categoria": "Gato",
         "marca": "Excellent",
         "edad": "Adulto",
-        "imagen": "excegato.jpg",
+        "imagen": "./Imagen/Alimentos/excegato.jpg",
         "descripcion": "Gato adulto"
         },
         {
