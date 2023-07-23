@@ -322,6 +322,44 @@ li{
                 }
             }
     }
+    .accesorios{
+        h2{
+            @include titulosh2b
+        }
+        @include contenedor;
+
+        .categoria{
+            justify-content: left;
+            margin: 20px;
+        }
+        .acce{
+            @include grid2;
+            .imagen{
+                overflow: hidden;
+                img{
+                    max-width: 100%;
+                    object-fit: cover;
+                    
+                }
+            }
+            h3{
+                display: block;
+                color: $seccionscolor;
+                margin: 20px 6px;
+                letter-spacing: 1px;
+                font-family: $general;
+            }
+            
+            li:hover{
+                transition: .3s;
+                color:rgb(234, 0, 0);
+                cursor: pointer;
+            }
+            .precio {
+                font-size: 90px;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width:330px){
@@ -341,7 +379,8 @@ li{
         }
         
         .productos,
-        .ropa{
+        .ropa,
+        .acce{
             grid-template-columns: repeat(1,1fr);
         }
     }

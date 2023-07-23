@@ -1,0 +1,30 @@
+[
+    {
+        "id":23,
+        "nombre":"Colchoneta Antidesgaro",
+        "precio": 13500,
+        "imagen": "colchonetaanti.jpg",
+        "categoria": "Colchonetas"
+    },
+    {
+        "id":24,
+        "nombre":"Shampoo Duo",
+        "precio": 1800,
+        "imagen": "shampoo2.jpg",
+        "categoria": "Higiene"
+    },
+    {
+        "id":26,
+        "nombre":"Pipeta",
+        "precio": 800,
+        "imagen": "pipeta3.jpg",
+        "categoria": "Higiene"
+    },
+    {
+        "id":26,
+        "nombre":"Pretal Pitbull",
+        "precio": 3500,
+        "imagen": "Pretales.jpg",
+        "categoria": "Pretales"
+    }
+]

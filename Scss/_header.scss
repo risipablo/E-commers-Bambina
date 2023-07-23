@@ -126,7 +126,9 @@ p{
 
 
 
-
+#scroll {
+    overflow-y: auto;
+}
 section {
     font-family: $general;
     position: fixed;
