@@ -8,6 +8,7 @@
 /* Grid de mobile */
 /* Mixins secciones escitorio */
 /* Inicio Header*/
+@import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
 * {
   box-sizing: border-box;
   padding: 0px;
@@ -890,99 +891,40 @@ li {
   max-width: 1200px;
   /* Filtro */
 }
-.alimentos .categoria {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 20px;
+.alimentos .filtros {
+  display: flex;
   justify-content: space-between;
+  margin: 27px;
   align-items: center;
   text-align: center;
   cursor: pointer;
 }
-.alimentos .categoria .filtro {
+.alimentos .filtro {
   display: flex;
   justify-content: center;
-  background-color: rgb(248, 247, 247);
+  background-color: rgb(238, 67, 67);
   border: none;
   padding: 8px 4px;
-  border-radius: 10px;
-  width: 100%;
+  border-radius: 12px;
+  width: 120px;
+  cursor: pointer;
+  transition: background-color 0.6s, opacity 0.6s;
 }
-.alimentos .categoria .filtro i {
-  margin-right: 5px;
-}
-.alimentos .categoria .filtro p {
-  font-size: 1rem;
-  display: inline-block;
-  color: #000000;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-.alimentos .categoria .contenido {
+.alimentos .contenido {
   display: none;
   border-radius: 20px 20px;
   background-color: rgb(248, 247, 247);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 280px;
   z-index: 999;
+  margin: 28px 14px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
 }
-.alimentos .categoria .contenido ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  margin-right: 20px;
-}
-.alimentos .categoria .contenido a {
-  color: #2e2d2d;
-}
-.alimentos .categoria .contenido .cerrar {
-  background-color: rgb(158, 76, 235);
-  color: #fff;
-  width: 100%;
-}
-.alimentos .categoria .contenido .cerrar i {
-  padding: 2px 9px;
-}
-.alimentos .categoria .contenido .cerrar i p {
-  display: inline-block;
-  padding: 2px 10px;
-}
-.alimentos .categoria .contenido .todos {
-  display: block;
-  width: 100%;
-  background-color: rgb(158, 76, 235);
-  color: #fff;
-  text-align: center;
-  padding: 3px;
-  cursor: pointer;
-}
-.alimentos .categoria .contenido.show {
+.alimentos .contenido.show {
   display: block;
   left: 0;
-}
-.alimentos .categoria .orden {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(248, 247, 247);
-  border: none;
-  border-radius: 10px;
-  width: 100%;
-  padding: 8px 4px;
-}
-.alimentos .categoria .orden p {
-  font-size: 1rem;
-  display: inline-block;
-  color: #000000;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-.alimentos .categoria .contenido2 {
-  display: none;
-}
-.alimentos .categoria .orden.active div {
-  display: block;
-  padding: 5px;
 }
 .alimentos .productos {
   display: grid;
@@ -1668,6 +1610,70 @@ h2 {
     margin-top: 70px;
   }
 }
+.contenedorlogin {
+  width: 100%;
+  height: 100vh;
+}
+.contenedorlogin .cuenta {
+  position: relative;
+  transform: scale(50%, 50%);
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 450px;
+  align-items: center;
+  text-align: center;
+  padding: 50px 60px 70px;
+  background-color: white;
+}
+.contenedorlogin .cuenta .campos {
+  background: rgb(246, 247, 249);
+  margin: 18px 0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  max-height: 65px;
+  transition: max-height 0.7s;
+  overflow: hidden;
+}
+.contenedorlogin .cuenta .campos input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 20px 12px;
+}
+.contenedorlogin .cuenta .campos i {
+  margin: 12px;
+  color: rgba(100, 100, 100, 0.6);
+}
+.contenedorlogin .cuenta #nombre {
+  display: none;
+}
+.contenedorlogin .cuenta .iniciar-btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.contenedorlogin .cuenta .iniciar-btn button {
+  flex-basis: 45%;
+  background-color: rgb(134, 31, 230);
+  color: #fff;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  height: 40px;
+  transition: background 1s;
+}
+.contenedorlogin .cuenta .iniciar-btn .disable {
+  background-color: rgba(143, 143, 143, 0.6);
+  color: rgb(22, 22, 22);
+}
+.contenedorlogin .cuenta .input-grupo {
+  height: 290px;
+}
+
 .contenedor-error {
   background-color: rgb(237, 240, 243);
   width: 100%;

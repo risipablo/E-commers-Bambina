@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Pablo Risi">
+    <meta name="description" content="Registrate para obtener toda la informacion de nuestra pagina oficial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Scss/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="contenedorlogin">
+        <div class="cuenta">
+            <h2 id="titulo" class="titulo"> Iniciar Sesion </h2>
+            <form>
+                <div class="input-grupo">
+                    <div class="campos" id="nombre">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Nombre">
+                    </div>
+                    <div class="campos">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="campos">
+                        <i class="fa-regular fa-eye"></i>
+                        <input type="password" placeholder="Contraseña">
+                    </div>
+                    <p>¿Olvidaste tu contraseña? <a href="#"> ¡Recuperala!</a></p>
+                </div>
+                <div class="iniciar-btn">
+                    <button type="button" id="crear">  Iniciar </button>
+                    <button type="button" id="iniciar" class="disable"> Registrarse   </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/usuario.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

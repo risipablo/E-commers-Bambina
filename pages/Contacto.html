@@ -102,16 +102,15 @@
         <div class="texto">
             <p> Tus consultas seran respondidas con la mayor rapidez posible </p>
         </div>
-            <div class="fila">
-            
+            <div class="fila" id="contactForm" action="https://formspree.io/pablomrisi@hotmail.com" method="POST">
                 <div class="col">
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Telefono">
-                    <input type="text" placeholder="Correo electronico">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="consulta"> </textarea>
-                        <a href="../pages/Error404.html"> <button>
+                    <input type="text" id="nombre" name="name" placeholder="Nombre" required >
+                    <input type="text" id="tel" placeholder="Telefono" required>
+                    <input type="text" id="email" name="email"  placeholder="Correo electronico" required>
+                    <textarea name="" id="mensaje" cols="30" rows="10" placeholder="consulta"> </textarea>
+                        <button type="submit">
                         <p>Enviar</p>
-                        </button> </a>
+                        </button> 
                 </div>
             </div>
         </div>
@@ -174,5 +173,6 @@
         <script src="https://code.jquery.com/jquery-latest.js"></script>
         <script src="../JS/menu.js"> </script>
         <script src="../JS/app.js"></script>
+        <script src="../JS/contacto.js"></script>
 
 </body>
